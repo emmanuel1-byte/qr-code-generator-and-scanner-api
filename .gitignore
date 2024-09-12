@@ -1,0 +1,67 @@
+# created by virtualenv automatically
+
+# Python bytecode files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pyd
+
+# Virtual environment
+venv/
+env/
+ENV/
+
+# Environment variables file
+.env
+
+# IDEs and editors
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Dependency directories
+pip-wheel-metadata/
+*.egg-info/
+dist/
+build/
+
+# Pytest cache
+.cache/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Logs
+*.log
+
+# Coverage reports
+*.coverage
+.coverage.*
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+
+# SQLite databases
+*.sqlite3
+*.db
+
+# Docker
+docker-compose.override.yml
+*.docker
+
+# Local settings and configuration files
+*.local
+*.env
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.swp
+*.swo
+*.tmp
+*.bak
