@@ -6,9 +6,9 @@ from schema import QrCode
 
 app = FastAPI()
 
-#Cors configuration
+# #Cors configuration
 app.add_middleware(
-CORSMiddleware, allow_origin=["*"],  allow_credentials=True,
+CORSMiddleware, allow_origins=["*"],  allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
@@ -21,16 +21,16 @@ def base_url():
 def generate_qrcode(data: QrCode):
     qr_code = qr_code_generator_helper(data)
     if qr_code:
-        return StreamingResponse(qr_code, media_type="image/png")
+        headers = {"Content-Disposition": "attachement; filename=qrcode.png"}
+        return StreamingResponse(qr_code, media_type="image/png", headers=headers)
     else:
-         raise HTTPException(status_code=400, detail="Failed to generated Qr code")
+         raise HTTPException(status_code=500, detail="Failed to generated Qr code")
     
     
 @app.post("/scan-qr")
 async def read_qrcode(file: UploadFile):
-    print(file.filename)
     qr_code = qr_code_reader_helper(file)
     if qr_code:
-        return { "message": qr_code}
+      return { "data": qr_code}
     else:
-        raise HTTPException(status_code=400, detail="Failed to read QR code")
+        raise HTTPException(status_code=500, detail="Failed to read QR code")

@@ -10,7 +10,7 @@ def qr_code_generator_helper(data):
         qr.add_data(data.content)  #Pass in the content for the QR code
         qr.make(fit=True)
     
-        img = qr.make_image(fill_color=data.fill_color, back_color=data.background_color) #Generate the Image
+        img = qr.make_image(fill_color="black", back_color=data.background_color) #Generate the Image
     
         #save Image in memory
         img_io = io.BytesIO()
@@ -39,3 +39,4 @@ def qr_code_reader_helper(file):
   except Exception as e:
       print(f"Error Reading QR code: {e}")
       return None
+      
