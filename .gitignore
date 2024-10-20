@@ -7,10 +7,14 @@ __pycache__/
 *.pyd
 *.pyd
 
-# Virtual environment
+
+# Virtual environment directories
 venv/
 env/
-ENV/
+bin/
+lib/
+share/
+
 
 # Environment variables file
 .env
@@ -65,3 +69,5 @@ Thumbs.db
 *.swo
 *.tmp
 *.bak
+
+git.sh

@@ -1,0 +1,51 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "Qr-code-generator-and-scanner",
+    "collectionId": "347bbef2-b0bb-434d-83fb-42d51d05f7fa",
+    "dateExported": "2024-09-18T20:25:23.222Z",
+    "version": "1.2",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "d6837a75-a27b-4ddd-891e-ae48f7d52ad9",
+            "colId": "347bbef2-b0bb-434d-83fb-42d51d05f7fa",
+            "containerId": "",
+            "name": "Generate Qr code",
+            "url": "http://127.0.0.1:8000/generate-qrcode",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-09-12T21:16:37.235Z",
+            "modified": "2024-09-18T20:20:55.593Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"content\":\"https://github.com/emmanuel1-byte\",\n  \"background_color\":\"pink\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "b74e27e7-58a2-42dc-b889-48ddb172d7aa",
+            "colId": "347bbef2-b0bb-434d-83fb-42d51d05f7fa",
+            "containerId": "",
+            "name": "Read Qr code",
+            "url": "http://127.0.0.1:8000/scan-qr",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2024-09-12T22:28:03.540Z",
+            "modified": "2024-09-18T20:21:25.063Z",
+            "headers": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [],
+                "files": [
+                    {
+                        "name": "file",
+                        "value": "/home/emmanuel/Pictures/Screenshots/Screenshot from 2024-09-18 21-21-10.png"
+                    }
+                ]
+            }
+        }
+    ],
+    "ref": "b-d4nt3HqEEXye_YJRkGQQo0yBW2AFkp2_wVA4LlZnXJGBKgUUY8y_QeEFRRkykHUe5_LmsVpVb1sD5-r9ci7A"
+}

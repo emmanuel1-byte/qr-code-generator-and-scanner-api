@@ -30,7 +30,6 @@ A simple FastAPI project to **generate** and **scan** QR codes. You can even **c
      {
        "data": "https://example.com",
        "background_color":"yellow",  // Optional (Default: white)
-       "fill_color":"green",  // Optional (Default: black)
      }
      ```
    - **Response**: Streams a PNG image of the QR code.
